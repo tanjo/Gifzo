@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1ED8FDB4C9AD3CFDAFE868246F8C7DD3696EB8FB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1ED8FDB4C9AD3CFDAFE868246F8C7DD3696EB8FB" : 9223372036854775807,
+    "0EF426521BE8165F82651848937E63CDC8488204" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "16C35969-8E0C-42B1-B995-D22C0124EC49",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1ED8FDB4C9AD3CFDAFE868246F8C7DD3696EB8FB" : "Gifzo.app\/",
+    "0EF426521BE8165F82651848937E63CDC8488204" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Gifzo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Gifzo.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tanjo\/dotfiles.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0EF426521BE8165F82651848937E63CDC8488204"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tanjo\/Gifzo.app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1ED8FDB4C9AD3CFDAFE868246F8C7DD3696EB8FB"
+    }
+  ]
+}

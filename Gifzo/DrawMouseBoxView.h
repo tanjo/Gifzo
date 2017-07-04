@@ -2,9 +2,6 @@
 //  DrawMouseBoxView.h
 //  Gifzo
 //
-//  Created by uiureo on 13/05/02.
-//  Copyright (c) 2013年 uiureo. All rights reserved.
-//
 
 #import <Cocoa/Cocoa.h>
 #import <Carbon/Carbon.h>
@@ -16,8 +13,7 @@
 @end
 
 @interface DrawMouseBoxView : NSView
-
 @property(weak) id <DrawMouseBoxViewDelegate> delegate;
 @property NSScreen *screen;
-
+@property NSButton *button;
 @end
