@@ -72,7 +72,7 @@ static const UInt16 MAC_ESC_KEY_CODE = 53;
   EventHotKeyID hotKeyID;
   hotKeyID.id = 0;
   hotKeyID.signature = 'r';
-  UInt32 hotKeyCode = 15;  // r
+  UInt32 hotKeyCode = MAC_ESC_KEY_CODE;  // r
   UInt32 hotKeyModifier = optionKey;
   
   
@@ -168,7 +168,8 @@ OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void 
   
   Float32 fontSize = 18.0;
   
-  CGFloat boxWidth = fontSize * [pressKeyMessageString length] - 64.0, boxHeight = fontSize + 4.0;
+  CGFloat boxWidth = fontSize * [pressKeyMessageString length];
+  CGFloat boxHeight = fontSize + 4.0;
   NSRect boxRect;
   
   if (_selectionDidFinished) {
@@ -191,14 +192,19 @@ OSStatus hotKeyHandler(EventHandlerCallRef nextHandler, EventRef theEvent, void 
                                 value:shadow
                                 range:messageRange];
   
+  // 中央揃え
+  NSMutableParagraphStyle *style = [[NSMutableParagraphStyle defaultParagraphStyle] mutableCopy];
+  [style setAlignment:NSTextAlignmentCenter];
+  [pressKeyMessageString addAttribute:NSParagraphStyleAttributeName value:style range:NSMakeRange(0, pressKeyMessageString.length)];
+  
   // テキスト背景の描画
   [transparentBlackColor set];
   [[NSColor whiteColor] setStroke];
   NSBezierPath *path = [NSBezierPath bezierPathWithRoundedRect:NSInsetRect(boxRect, -4.0, -4.0) xRadius:4.0 yRadius:4.0];
   [path setLineWidth:2.0];
   [path stroke];
-
-  [path fill];[pressKeyMessageString drawInRect:boxRect];
+  [path fill];
+  [pressKeyMessageString drawInRect:boxRect];
 
 // TODO: 終了時になぜか押せないので調べる (別のところをクリックすると次にSpaceキーを押しても停止しないのもこのせいだろう
 //  if (!self.button) {
